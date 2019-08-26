@@ -19,7 +19,24 @@ app.use(morgan('dev')); // http logging
 app.use(cors()); // enable CORS request
 app.use(express.static('public'));
 
-
+app.get('/api/cart_pods', (req, res) => {
+    client.query(`
+        SELECT
+            id,
+            name,
+            no_of_carts,
+            location
+        FROM CATS;
+    `)
+        .then(result => {
+            res.json(result.rows);
+        })
+        .catch(err => {
+            res.status(500).json({
+                error: err.message || err
+            });
+        });
+});
 
 // Start the server
 app.listen(PORT, () => {

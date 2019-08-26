@@ -10,7 +10,7 @@ class Header extends Component {
                 <nav>
                     <a href="./">Home</a>
                     <a href="./pod-list.html">Cart Pods</a>
-                    <a href="./pod-form.html">Add a Cart</a>
+                    <a href="./pod-form.html">Add a Pod</a>
                 </nav>
             </header>
         `;
