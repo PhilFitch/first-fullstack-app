@@ -1,0 +1,21 @@
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-around;
+    background: rgb(177, 228, 228);
+    border-bottom: 1px solid orange
+}
+
+h1 {
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    margin: 0 20px;
+    flex-grow: 1;
+}
+
+nav a {
+    margin-right: 10px;
+}
