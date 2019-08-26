@@ -18,6 +18,7 @@ const PORT = process.env.PORT;
 app.use(morgan('dev')); // http logging
 app.use(cors()); // enable CORS request
 app.use(express.static('public'));
+app.use(express.json());
 
 app.get('/api/cart_pods', (req, res) => {
     client.query(`
@@ -25,8 +26,9 @@ app.get('/api/cart_pods', (req, res) => {
             id,
             name,
             no_of_carts,
+            seating,
             location
-        FROM CATS;
+        FROM CART_PODS;
     `)
         .then(result => {
             res.json(result.rows);
