@@ -5,7 +5,7 @@ class PodItem extends Component {
         const pod = this.props.pod;
         console.log(pod);
         return /*html*/`
-            <li class="pod-item">
+            <li id="pod-item">
                 <div class="info-container">
                     <h2>${pod.name}</h2>
                     <p class="noOfCarts">no. of carts: ${pod.no_of_carts}</p>
